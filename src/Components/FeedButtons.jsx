@@ -1,6 +1,7 @@
 import { FeedButton } from './FeedButton'
 import { faArrowTrendUp, faCoins, faRocket, faPlus } from '@fortawesome/free-solid-svg-icons'
-import {  faCommentDots, faBell } from '@fortawesome/free-regular-svg-icons'
+import { faCommentDots, faBell } from '@fortawesome/free-regular-svg-icons'
+
 export const FeedButtons = () => {
     return (
         <div class='headerButtons'>

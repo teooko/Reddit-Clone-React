@@ -8,14 +8,12 @@ import { ProfileDropDown } from './ProfileDropDown';
 export const NavBar = () => {
     return (
         <header class="card" id="headerCard">
-      
             <RedditLogo/>
             <FeedDropDown />
             <Search />
             <FeedButtons />
             <AdvertiseButton />
             <ProfileDropDown />
-        
         </header>
     )
 };

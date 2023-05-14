@@ -5,13 +5,15 @@ export const FeedDropDown = () => {
     return (
         <button class="dropDown">
             <div class="dropDownSelected">
-                <FontAwesomeIcon icon={faHouse} style={{  color: '#d7dadc',
-                    fontSize: '20px',
-                    marginRight: '8px'}}/>
+                <FontAwesomeIcon icon={faHouse} 
+                    style={{
+                        color: '#d7dadc',
+                        fontSize: '20px',
+                        marginRight: '8px'}}/>
                     Home
             </div>
 
             <FontAwesomeIcon icon={faChevronDown} style={{}}/>
-      </button>
+        </button>
     )
 }
