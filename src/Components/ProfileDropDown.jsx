@@ -27,6 +27,7 @@ export const ProfileDropDown = () => {
 			<ProfileDetails />
 
 			<FontAwesomeIcon icon={faChevronDown} style={{
+				size: '20px',
 				color: '#676c72',
 				marginRight: '7px'
 			}} />

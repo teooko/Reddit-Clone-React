@@ -13,7 +13,7 @@ export const FeedDropDown = () => {
                     Home
             </div>
 
-            <FontAwesomeIcon icon={faChevronDown} style={{}}/>
+            <FontAwesomeIcon icon={faChevronDown} style={{size: '20px'}}/>
         </button>
     )
 }
