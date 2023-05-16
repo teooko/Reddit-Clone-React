@@ -4,11 +4,11 @@
   padding: 0;
 }
 
-body {
+.Content {
   background-color: #030303;
 
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 
   font-family: Arial, Helvetica, sans-serif;
   line-height: 15px;
@@ -537,8 +537,6 @@ td {
 }
 
 .userPicture {
-  background-size: 38px 38px;
-
   border: 2px solid #343536;
   border-radius: 100%;
 
@@ -606,7 +604,6 @@ td {
 
 #icon {
   font-size: 20px;
-  margin-right: 5px;
 }
 
 .fa-solid.fa-ellipsis {
@@ -789,7 +786,7 @@ td {
   padding: 50px;
 }
 
-.fa-solid.fa-spinner {
+.loading {
   animation-name: spin;
   animation-duration: 1000ms;
   animation-iteration-count: infinite;
@@ -996,4 +993,11 @@ td {
   color:#676c72;
   font-size: 12px;
   margin: 20px;
+}
+
+.FeedSortButtons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
 }
