@@ -3,7 +3,7 @@ import { Content } from './Content/Components/Content'
 
 function App() {
   return (
-    <div className="App">
+    <div >
       <NavBar />
       <Content />
     </div>
