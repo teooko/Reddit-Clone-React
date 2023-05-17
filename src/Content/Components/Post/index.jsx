@@ -1,6 +1,7 @@
 import { VoteBar } from "./Components/VoteBar"
 import { PostHeader } from "./Components/PostHeader"
 import { PostInteractionBar } from "./Components/PostInteractionBar"
+
 export const Post = ({ posts }) => {
     return (
         <div class="card" id="postCard">
