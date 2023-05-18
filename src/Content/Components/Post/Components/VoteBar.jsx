@@ -10,15 +10,34 @@ export const VoteBar = ({ likes }) => {
     const [votes, setVotes] = useState(likes)
     const [color, setColor] = useState(gray)
 
-    const handleUpvote = () => {setVotes(likes+1); setColor(orange)};
-    const handleDownvote = () => {setVotes(likes-1); setColor(blue)};
+    const handleUpvote = () => {
+        if (votes === likes + 1) {
+            setVotes(likes);
+            setColor(gray);
+        }
+        else {
+            setVotes(likes + 1);
+            setColor(orange)
+        }
+    };
+
+    const handleDownvote = () => {
+        if (votes === likes - 1) {
+            setVotes(likes);
+            setColor(gray);
+        }
+        else {
+            setVotes(likes - 1);
+            setColor(blue)
+        }
+    };
 
     return (
         <div class="upvoteBar">
-            <div class="upvotes" style={{color: color}}>
-                <VoteButton icon={faUpLong} buttonId={"upvoteButton"} iconId={"arrowUp"} handleVote={handleUpvote} color={color}/>
-                    {votes}
-                <VoteButton icon={faDownLong} buttonId={"downvoteButton"} iconId={"arrowDown"} handleVote={handleDownvote} color={color}/>
+            <div class="upvotes" style={{ color: color }}>
+                <VoteButton icon={faUpLong} buttonId={"upvoteButton"} iconId={"arrowUp"} handleVote={handleUpvote} color={color === blue ? gray : color}/>
+                {votes}
+                <VoteButton icon={faDownLong} buttonId={"downvoteButton"} iconId={"arrowDown"} handleVote={handleDownvote} color={color === orange ? gray : color}/>
             </div>
         </div>
     )

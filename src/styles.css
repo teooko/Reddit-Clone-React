@@ -663,11 +663,11 @@ td {
 }
 
 #upvoteButton:hover #arrowUp {
-  color: #ff5414;
-}
+  color: #ff5414 !important;
+} 
 
 #downvoteButton:hover #arrowDown {
-  color: #7193ff;
+  color: #7193ff !important;
 }
 
 .post {
