@@ -15,7 +15,7 @@ const usePostsManager = () => {
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(true);
 
-    const fetchPost = async () => {
+    const fetchPosts = async () => {
         let response = await client.get(`?page=${page}&limit=5`);
         setPosts([...posts, ...response.data.data]);
         setLoading(false);
@@ -23,7 +23,7 @@ const usePostsManager = () => {
     };
 
     useEffect(() => {
-        fetchPost();
+        fetchPosts();
     }, [])
 
     const handleScroll = () => {
@@ -33,7 +33,7 @@ const usePostsManager = () => {
         if (endOfPage) {
             if (!loading) {
                 setLoading(true);
-                fetchPost();
+                fetchPosts();
             }
         }
     }
