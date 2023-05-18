@@ -1,5 +1,5 @@
 import { NavBar } from './NavBar/Components/NavBar'
-import { Content } from './Content/Components/Content'
+import { Content } from './Content'
 
 function App() {
   return (

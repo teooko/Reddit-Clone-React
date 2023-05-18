@@ -1,5 +1,5 @@
-import { Article } from './Article'
-import { Aside } from './Aside'
+import { Article } from './Components/Article'
+import { Aside } from './Components/Aside'
 
 export const Content = () => {
     return (
