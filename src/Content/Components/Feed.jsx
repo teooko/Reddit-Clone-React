@@ -16,6 +16,7 @@ const usePostsManager = () => {
     const [loading, setLoading] = useState(true);
 
     const fetchPosts = async () => {
+        setLoading(true);
         let response = await client.get(`?page=${page}&limit=5`);
         setPosts([...posts, ...response.data.data]);
         setLoading(false);
@@ -27,15 +28,11 @@ const usePostsManager = () => {
     }, [])
 
     const handleScroll = () => {
-        const endOfPage =
+        const reachedEndOfPage =
             window.innerHeight + window.pageYOffset >= document.documentElement.offsetHeight;
 
-        if (endOfPage) {
-            if (!loading) {
-                setLoading(true);
-                fetchPosts();
-            }
-        }
+        if (reachedEndOfPage && !loading)
+            fetchPosts();
     }
 
     useEffect(() => {
