@@ -15,14 +15,9 @@ const usePostsManager = () => {
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(1);
 
-    const handlePosts = (response) => {
-        const newPosts = [...posts, ...response];
-        setPosts(newPosts);
-    }
-
     const fetchPost = async () => {
         let response = await client.get(`?page=${page}&limit=5`);
-        handlePosts(response.data.data);
+        setPosts([...posts, ...response.data.data]);
         setLoading(0);
         setPage(page + 1);
     };
