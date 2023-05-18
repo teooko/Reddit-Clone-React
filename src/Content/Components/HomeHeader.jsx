@@ -1,4 +1,5 @@
 import homeSnoo from "./../Assets/homeSnoo.png"
+
 export const HomeHeader = () => {
     return (
         <div class="homeHeader">

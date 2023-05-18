@@ -1,6 +1,5 @@
 import { CreatePost } from './CreatePost'
 import { FeedSort } from './FeedSort'
-
 import { Feed } from './Feed'
 
 export const Article = () => {
