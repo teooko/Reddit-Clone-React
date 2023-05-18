@@ -13,12 +13,12 @@ const client = axios.create({
 const usePostsManager = () => {
     const [page, setPage] = useState(0);
     const [posts, setPosts] = useState([]);
-    const [loading, setLoading] = useState(1);
+    const [loading, setLoading] = useState(true);
 
     const fetchPost = async () => {
         let response = await client.get(`?page=${page}&limit=5`);
         setPosts([...posts, ...response.data.data]);
-        setLoading(0);
+        setLoading(false);
         setPage(page + 1);
     };
 
@@ -32,7 +32,7 @@ const usePostsManager = () => {
 
         if (endOfPage) {
             if (!loading) {
-                setLoading(1);
+                setLoading(true);
                 fetchPost();
             }
         }
