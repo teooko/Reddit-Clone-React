@@ -10,7 +10,7 @@ const client = axios.create({
     }
 })
 
-export const Feed = () => {
+const usePostsManager = () => {
     const [page, setPage] = useState(0);
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(1);
@@ -24,7 +24,7 @@ export const Feed = () => {
         let response = await client.get(`?page=${page}&limit=5`);
         handlePosts(response.data.data);
         setLoading(0);
-        setPage(page+1);
+        setPage(page + 1);
     };
 
     useEffect(() => {
@@ -33,24 +33,31 @@ export const Feed = () => {
 
     const handleScroll = () => {
         const endOfPage =
-        window.innerHeight + window.pageYOffset >= document.documentElement.offsetHeight;
-    
-      if (endOfPage) {
-        if (!loading) {
-          setLoading(1);
-          fetchPost();
+            window.innerHeight + window.pageYOffset >= document.documentElement.offsetHeight;
+
+        if (endOfPage) {
+            if (!loading) {
+                setLoading(1);
+                fetchPost();
+            }
         }
-      }
     }
 
-    useEffect(() => {  window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
     }, [loading]);
+
+    return { loading, posts };
+}
+
+export const Feed = () => {
+    const { loading, posts } = usePostsManager();
 
     return (
         loading ? <>
-            {posts.map(post => <Post post={post}/>)}
+            {posts.map(post => <Post post={post} />)}
             <Loading />
-        </> : posts.map(post => <Post post={post} />) 
+        </> : posts.map(post => <Post post={post} />)
     )
 }
