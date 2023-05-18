@@ -1,4 +1,4 @@
-import { NavBar } from './NavBar/Components/NavBar'
+import { NavBar } from './NavBar'
 import { Content } from './Content'
 
 function App() {
