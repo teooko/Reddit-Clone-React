@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle } from '@fortawesome/free-solid-svg-icons'
 import { PostTime } from "./PostTime"
+
 export const PostDetails = ({ subreddit, publishDate, firstName, lastName }) => {
     return (
         <div class="postDetails">
@@ -10,13 +11,13 @@ export const PostDetails = ({ subreddit, publishDate, firstName, lastName }) => 
                 r/{subreddit.replaceAll(' ', '_')}
             </div>
 
-            <FontAwesomeIcon icon={faCircle} className='Circle'/>
+            <FontAwesomeIcon icon={faCircle} className='Circle' />
 
             <div class="postedBy">
                 Posted by u/{firstName}_{lastName}
             </div>
 
-            <PostTime publishDate={publishDate}/>
+            <PostTime publishDate={publishDate} />
         </div>
     )
 }
