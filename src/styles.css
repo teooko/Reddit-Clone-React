@@ -862,6 +862,15 @@ td {
   cursor: pointer;
 }
 
+.voteButton:focus {
+  background-color: #272729;
+
+  border: #272729;
+  border-radius: 4px;
+
+  cursor: pointer;
+}
+
 .Filter {
   background-color: #272729;
   color: #d7dadc;

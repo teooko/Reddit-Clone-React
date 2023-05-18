@@ -27,13 +27,11 @@ export const PostInteractionBar = ({ id }) => {
 
     return (
         <div class="postInteractionBar">
-            <PostButton icon={faComment} name={"10 Comments"} />
-                {/*
-                    posts[0].total === 1
-                        ? posts[0].total + ' Comment'
-                        : posts[0].total + ' Comments'*/
-                        
-                }
+            <PostButton icon={faComment} name={loading ? '' :
+                    comments === 1
+                        ? comments + ' Comment'
+                        : comments + ' Comments'
+                } />
             <PostButton icon={faGift} name={"Award"} />
             <PostButton icon={faShare} name={"Share"} />
             <PostButton icon={faBookmark} name={"Save"} />
