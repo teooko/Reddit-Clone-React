@@ -192,7 +192,6 @@ aside {
 }
 
 .homeBanner {
-  background-image: url('assets/home-banner@2x.png');
   background-size: 308px 34px;
 
   height: 34px;
@@ -200,7 +199,6 @@ aside {
 }
 
 .homeSnoo {
-  background-image: url('assets/snoo-home@2x.png');
   background-size: 40px 68px;
 
   position: relative;
