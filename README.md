@@ -15,8 +15,10 @@ There are 5 posts added to the feed each time the user scrolls to the bottom of 
 Each api request is used to set the subreddit name and picture, username and number of upvotes, there is an additional request for the total number of comments.
 
 # Setting up
+
 Instructions on starting the website:
 
+0. Node.js required
 1. Create a `config.js` file inside the **src** folder
 2. Add the dummyapi key in this format:
 ```
