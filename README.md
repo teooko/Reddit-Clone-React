@@ -1,6 +1,6 @@
 # Reddit Clone in React
 
-This practice project aims to recreate the home page of Reddit as of march 2023 in react. 
+This practice project aims to recreate the home page of Reddit as of march 2023 in **React**. 
 
 Check out my [other repository](https://github.com/teooko/Reddit-Clone-Vanilla) of the same page made in **pure html, css and javascript**. 
 
@@ -25,7 +25,6 @@ Instructions on starting the website:
 export const envConfig = {
     API_KEY: 'your key'
 };
-
 ```
 3. Use the command `npm start` to open the page
 
