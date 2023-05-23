@@ -1,11 +1,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFan } from '@fortawesome/free-solid-svg-icons'
-import { ProfilePicture } from './ProfilePicture'
-
+import { ProfilePicture } from '../../../Components/ProfilePicture'
+import avatarDefault from "./avatarDefault.png"
 export const ProfileDetails = () => {
 	return (
 		<div class="userMenuDetails">
-			<ProfilePicture />
+			<ProfilePicture  image={avatarDefault} cssClass={'userMenuPicture'}/>
 
 			<div class="userMenuText">
 				username
