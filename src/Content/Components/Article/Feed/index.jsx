@@ -10,14 +10,12 @@ const client = axios.create({
     }
 })
 
-
 export const Feed = () => {
     const { loading, posts } = usePostsManager(client);
-
     return (
         loading ? <>
-            {posts.map(post => <Post post={post} />)}
+            {posts.map(post => <Post post={post} key={post.id} />)}
             <Loading />
-        </> : posts.map(post => <Post post={post} />)
+        </> : posts.map(post => <Post post={post} key={post.id} />)
     )
 }
