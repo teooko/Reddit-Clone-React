@@ -13,13 +13,13 @@ export const NavBar = () => {
     const handleClick = useCallback((event) => {
         setFeedClicked(!feedClicked);
         event.stopPropagation();
-    }, [feedClicked, setFeedClicked]);
+    });
 
     return (
         <header class="card" id="headerCard">
             <RedditLogo/>
             {feedClicked ? <Feed onClick = {() => setFeedClicked(!feedClicked)} /> : null}
-            <FeedDropDown onClick={handleClick}/>
+            <FeedDropDown onClick={handleClick} clicked={feedClicked}/>
             <Search />
             <FeedButtons />
             <AdvertiseButton />

@@ -1,7 +1,9 @@
+import avatarDefault from './avatarDefault.png'
+
 export const ImageButton = ({title}) => {
     return (
         <div class="headerMenuDefaultButton">
-            <div class="headerMenuUser"></div>
+            <img src={avatarDefault} class="headerMenuUser" />
             {title}
         </div>
     )

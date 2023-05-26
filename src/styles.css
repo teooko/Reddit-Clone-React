@@ -300,8 +300,8 @@ td {
 }
 
 .dropDown:hover {
-  border: 1px solid #343536;
-  border-radius: 4px;
+  border: 1px solid #343536 !important;
+  border-radius: 4px !important;
   cursor: pointer;
 }
 
@@ -338,10 +338,6 @@ td {
 
   height: 481px;
   width: 268px;
-}
-
-.headerMenuOpen.show {
-  display: block;
 }
 
 .fa-solid.fa-fan {
@@ -925,7 +921,8 @@ td {
   background-size: 20px 20px;
 
   margin: 6px;
-  margin-right: 11px;
+  margin-right: 8px;
+  margin-left: 9px;
 
   width: 20px;
   height: 20px;
