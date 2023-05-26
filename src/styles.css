@@ -406,7 +406,6 @@ td {
   position: fixed;
   right: 13px;
   top: 49px;
-  display: none;
 
   overflow-y: scroll;
   overflow-x: hidden;
@@ -990,8 +989,16 @@ td {
 
 }
 
-#userMenuButton {
+.userMenuIconButton:hover {
+  background-color: #272729;
+  cursor: pointer;
+}
+
+.userMenuButton {
   color:#d0d3d5;
+  width: 20px;
+  height: 26px;
+  margin-right: 7px;
 }
 
 .userMenuCopyright {

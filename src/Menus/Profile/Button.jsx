@@ -1,0 +1,1 @@
+export const Button = ({title}) => <div class="userMenuDefaultButton">{title}</div>

@@ -7,23 +7,31 @@ import { ProfileDropDown } from './Components/ProfileDropDown';
 import { Feed } from '../Menus/Feed'
 
 import { useCallback, useState } from 'react';
+import { Profile } from '../Menus/Profile';
 export const NavBar = () => {
     const [feedClicked, setFeedClicked] = useState(false);
+    const [profileClicked, setProfileClicked] = useState(false);
 
-    const handleClick = useCallback((event) => {
+    const handleFeedClick = useCallback((event) => {
         setFeedClicked(!feedClicked);
+        event.stopPropagation();
+    });
+
+    const handleProfileClick = useCallback((event) => {
+        setProfileClicked(!profileClicked);
         event.stopPropagation();
     });
 
     return (
         <header class="card" id="headerCard">
             <RedditLogo/>
+            <FeedDropDown onClick={handleFeedClick} clicked={feedClicked}/>
             {feedClicked ? <Feed onClick = {() => setFeedClicked(!feedClicked)} /> : null}
-            <FeedDropDown onClick={handleClick} clicked={feedClicked}/>
             <Search />
             <FeedButtons />
             <AdvertiseButton />
-            <ProfileDropDown />
+            <ProfileDropDown onClick={handleProfileClick} clicked={profileClicked}/>
+            {profileClicked ? <Profile onClick = {() => setProfileClicked(!profileClicked)} /> : null}
         </header>
     )
 };
