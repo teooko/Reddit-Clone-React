@@ -1,4 +1,3 @@
-import envConfig from '../../../../config'
 import { Post } from './Post';
 import axios from 'axios'
 import { usePostsManager } from '../../../../Hooks/usePostsManager';
@@ -6,7 +5,7 @@ import { Loading } from '../../Loading'
 
 const client = axios.create({
     baseURL: 'https://dummyapi.io/data/v1/post', headers: {
-        'app-id': envConfig.API_KEY
+        'app-id': process.env.REACT_APP_API_KEY
     }
 })
 

@@ -1,9 +1,6 @@
-import envConfig from '../../../../../../config'
-import axios from 'axios'
 import { faGift, faShare, faEllipsis } from '@fortawesome/free-solid-svg-icons'
 import { faComment, faBookmark } from '@fortawesome/free-regular-svg-icons'
 import { Button } from './Button'
-import { useState, useEffect } from 'react'
 
 export const PostInteractionBar = ({ comments }) => {
 
