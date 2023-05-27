@@ -8,11 +8,18 @@ export const usePostsManager = (client) => {
 
     const fetchPosts = async () => {
         setLoading(true);
-        let response = await client.get(`?page=${page}&limit=5`);
-        setPosts([...posts, ...response.data.data]);
+        let postResponse = await client.get(`?page=${page}&limit=5`);
+
+        let newPosts = postResponse.data.data;
+        let commentsResponses = await Promise.all(newPosts.map(post => client.get(`/${post.id}/comment`)));
+        commentsResponses.forEach((comments, i) => {
+            newPosts[i].comments = comments.data.total;
+        });
+
+        setPosts([...posts, ...newPosts]);
         setLoading(false);
         setPage(page + 1);
-    };
+    }
 
     useEffect(() => {
         fetchPosts();

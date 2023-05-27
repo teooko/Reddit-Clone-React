@@ -9,7 +9,7 @@ export const Post = ({ post }) => {
             <div class="post">
                 <Header title={post.text} subreddit={post.tags[2]} publishDate={post.publishDate} firstName={post.owner.firstName} lastName={post.owner.lastName}/>
                 <img src={post.image} class="postImage"></img>
-                <PostInteractionBar id={post.id}/>
+                <PostInteractionBar comments={post.comments}/>
             </div>
         </div>
     )

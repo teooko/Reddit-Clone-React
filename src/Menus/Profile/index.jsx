@@ -6,9 +6,10 @@ import { IconButton } from "./IconButton"
 import { MyStuff } from "./MyStuff"
 import { Buttons } from "./Buttons"
 import { useOutsideClick } from "../../Hooks/useOutsideClick"
+
 export const Profile = ({ onClick }) => {
     const ref = useOutsideClick(onClick)
-    
+
     return (
         <div class="userMenuOpen" tabIndex={0} ref={ref}>
             <MyStuff />
