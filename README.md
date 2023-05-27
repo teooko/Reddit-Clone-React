@@ -6,6 +6,8 @@ Check out my [other repository](https://github.com/teooko/Reddit-Clone-Vanilla) 
 
 ![Screenshot](screenshot.png)
 
+View the website live [here](https://reddit-clone-react-gilt.vercel.app/).
+
 # Technical Details
 
 The page uses a social media mock api called [dummyapi.io](https://dummyapi.io/) and [Lorem Picsum](https://picsum.photos/) for subbreddit pictures. 
@@ -19,12 +21,10 @@ Each api request is used to set the subreddit name and picture, username and num
 Instructions on starting the website:
 
 0. Node.js required
-1. Create a `config.js` file inside the **src** folder
-2. Add the dummyapi key in this format:
+1. Create a `.env` file inside the **root** folder
+2. Add the dummyapi key as an environment variable:
 ```
-export const envConfig = {
-    API_KEY: 'your key'
-};
+REACT_APP_API_KEY='your key'
 ```
 3. Use the command `npm start` to open the page
 
